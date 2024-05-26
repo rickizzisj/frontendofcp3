@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <script src="../javas/script.js"></script>
+        <title>Checkpoint3</title>
+    </head>
+    <body>
+        <div class="divprincipal">
+            <h2>ENTRE EM SUA CONTA</h2>
+            <p class="padronizacao"></p>
+            <div class="divconteudo">
+                <form action="#" method="get" onsubmit="event.preventDefault(); return validaLogin();">
+                    <fieldset>
+                        <legend>LOGIN</legend>
+                        <div>
+                            <label for="idEmail">Email</label>
+                            <input type="text" name="inputEmail" id="idEmail" placeholder="Digite seu email" required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$" oninvalid="this.setCustomValidity('Digite o padrão correto!')">
+                        </div>
+                        <div>
+                            <label for="idSenha">Senha</label>
+                            <input type="password" name="inputSenha" id="idSenha" placeholder="Digite sua senha">
+                        </div>
+                        <div>
+                            <button type="submit" >Entrar</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </body>
+    </html>
