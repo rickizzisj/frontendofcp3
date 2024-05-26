@@ -19,6 +19,24 @@ function validaLogin() {
 
     
 }
+    if (usuarioCadastrado) {
+    valida.textContent = 'Sucesso!';
+    valida.style.color = 'green';
+    sessionStorage.setItem('usuario', JSON.stringify(usuarioCadastrado));
+    setTimeout(() => {
+        window.location.href = '../html/index.html';
+    }, 5000);}   
+    
+    else {
+    valida.textContent = 'Erro!';
+    valida.style.color = 'red';
+}
+
+setTimeout(() => {
+    valida.textContent = '';
+}, 5000);
+
+return !!usuarioCadastrado;
 function logout() {
     sessionStorage.removeItem('usuario');
     window.location.href = '../html/cadastro.html'; 
